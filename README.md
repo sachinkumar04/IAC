@@ -2,7 +2,7 @@
 # Terraform Configuration for AWS EKS Cluster
 
 ## Overview
-- This Terraform configuration sets up an AWS EKS (Elastic Kubernetes Service) Cluster.
+- This Terraform configuration sets up an AWS EKS (Elastic Kubernetes Service) Cluster.EKS
 - It includes configurations for providers, variables, main settings, a VPC, an EKS cluster, and outputs.
 
 ## Requirements
