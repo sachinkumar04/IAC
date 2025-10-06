@@ -1,1 +1,89 @@
-this is test file
+Integrate git on VM with key;
+
+cd ~/.ssh
+key-gen
+
+copy the publickey and add into git ssh
+
+after that run this command on vm;
+
+
+
+mkdir Project
+cd Project
+git clone code with repo
+
+cd repo directory;
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519"
+
+
+git config core.sshCommand "ssh -i ~/.ssh/id_ed25519 -F /dev/null"
+
+(this command use as connection for Git )
+
+
+Verify the SSH configuration:
+Run the following to check if Git is using the correct SSH key:
+
+git config --get core.sshCommand
+
+
+It should return something like:
+
+ssh -i ~/.ssh/id_ed25519 -F /dev/null
+
+
+Testing SSH connection:
+Before you push or pull, you can test the SSH connection with GitHub using:
+
+ssh -T git@github.com
+
+
+
+c2cbddddda88260ba215bdd2
+
+ghp_koCdddddsssskszxE1LZk5oVsuZWQOtwPk0RA134Ai7dK
+
+
+docker login -u sachinkumar04
+
+dck-bE-waCbf0Q__Bsc8
+
+
+If everything is configured correctly, you should see:
+
+
+Change the remote URL to use SSH:
+You can change the remote URL to use SSH instead of HTTPS by running the following command:
+
+git remote set-url origin git@github.com:sachinkumar04/IAC.git
+
+
+git remote set-url origin git@github.com/sachinkumar04/reactjs-app.git
+
+
+This will switch your remote URL to use SSH for communication, so you won't be prompted for your GitHub username and password anymore.
+
+Verify the change:
+After running the above command, verify the URL change by running:
+
+git remote -v
+
+
+You should now see:
+
+origin  git@github.com:sachinkumar04/IAC.git (fetch)
+origin  git@github.com:sachinkumar04/IAC.git (push)
+
+
+Push your changes:
+Now, try pushing your changes again:
+
+git push -u origin main
+
+
+after creation jumpserver;
+
+eksctl create cluster --name quiz-app-cluster --region us-east-1 --node-type t2.medium --nodes-min2 --nodes-max 4
+
+
